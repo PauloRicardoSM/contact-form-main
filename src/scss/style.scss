@@ -25,9 +25,10 @@
 
 body {
     @include mixins.flex-center;
-    height: 100vh;
     background-color: variables.$green-lighter;
     overflow-x: hidden;
+    color: variables.$green-medium;
+    padding: 10% 0;
 }
 
 .hidden {
@@ -40,19 +41,101 @@ body {
 
 .card {
     background-color: variables.$white;
+    padding: 5%;
+    border-radius: 20px;
+
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10%;
+        color: variables.$gray-darker
+    }
+
+    p {
+        @include mixins.flex-column;
+        margin-bottom: 10%;
+    }
+
+    input {
+        border: 1px solid variables.$gray-medium;
+        border-radius: .5rem;
+        height: 2.5rem;
+    }
+
+    label {
+        margin-bottom: 3%;
+    }
 
     &-form {
         &-error {
             display: none;
         }
     }
+
+    &-form-queryType {
+        label {
+            margin-bottom: 0;
+        }
+
+        input {
+            margin-right: 5%;
+            height: auto;
+        }
+
+        h2 {
+            font-size: 1rem;
+            font-weight: normal;
+            margin-bottom: 3%;
+        }
+
+        p {
+            flex-direction: row;
+            align-items: center;
+            border: 1px solid variables.$gray-medium;
+            border-radius: .5rem;
+            padding: 4% 8%;
+            margin-bottom: 5%;
+        }
+    }
+
+    &-form-massage {
+        margin-top: 5%;
+
+        textarea {
+            height: 12rem;
+            border-radius: 1rem;
+            border: 1px solid variables.$gray-medium;
+        }
+    }
+
+    &-form-consent {
+        input {
+            height: auto; 
+            margin-right: 5%;
+        }
+
+        p {
+            flex-direction: row;
+            margin: 0 0 7%;
+        }
+    }
+
+    button {
+        background-color: variables.$green-medium;
+        color: variables.$white;
+        padding: 5% 0;
+        border: none;
+        border-radius: .7rem;
+        width: 100%;
+    }
 }
 
 .attribution {
-    font-size: 11px;
+    font-size: 0.7rem;
     text-align: center;
+    margin-top: 3%;
 
     a {
+        font-size: 0.7rem;
         color: hsl(228, 45%, 44%);
     }
 }

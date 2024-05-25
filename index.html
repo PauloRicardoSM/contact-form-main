@@ -41,7 +41,8 @@
             <p>
               <label for="iemail">Email Address</label>
               <input type="email" name="email" id="iemail" aria-describedby="emailError emailInvalidError">
-              <span class="card-form-error" id="emailInvalidError" aria-live="polite">Please enter a valid email address</span>
+              <span class="card-form-error" id="emailInvalidError" aria-live="polite">Please enter a valid email
+                address</span>
               <span class="card-form-error" id="emailError" aria-live="polite">This field is required</span>
             </p>
           </div>
@@ -50,9 +51,9 @@
         <fieldset class="hidden" id="queryInformation">
           <legend class="visually-hidden">Query Information</legend>
           <div class="card-form-queryType">
-            <p>
+            <h2>
               Query Type
-            </p>
+            </h2>
             <p>
               <input type="radio" name="queryType" id="queryTypeGeneral" value="general"
                 aria-describedby="queryTypeError">
@@ -83,10 +84,11 @@
         <fieldset class="hidden" id="consent">
           <legend class="visually-hidden">Consent</legend>
           <div class="card-form-consent">
-            <input type="checkbox" name="consent" id="iconsent">
-            <label for="iconsent">I consent to being contacted by the team</label>
-            <span class="card-form-error" id="consentError" aria-live="polite">To submit this form, please consent to
-              being contacted</span>
+            <p>
+              <input type="checkbox" name="consent" id="iconsent">
+              <label for="iconsent">I consent to being contacted by the team</label>
+              <span class="card-form-error" id="consentError" aria-live="polite">To submit this form, please consent to being contacted</span>
+            </p>
           </div>
         </fieldset>
 

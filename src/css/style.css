@@ -22,9 +22,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   background-color: hsl(148, 38%, 91%);
   overflow-x: hidden;
+  color: hsl(169, 82%, 27%);
+  padding: 10% 0;
 }
 
 .hidden {
@@ -37,15 +38,81 @@ body {
 
 .card {
   background-color: hsl(0, 0%, 100%);
+  padding: 5%;
+  border-radius: 20px;
+}
+.card h1 {
+  font-size: 1.5rem;
+  margin-bottom: 10%;
+  color: hsl(187, 24%, 22%);
+}
+.card p {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10%;
+}
+.card input {
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 0.5rem;
+  height: 2.5rem;
+}
+.card label {
+  margin-bottom: 3%;
 }
 .card-form-error {
   display: none;
 }
+.card-form-queryType label {
+  margin-bottom: 0;
+}
+.card-form-queryType input {
+  margin-right: 5%;
+  height: auto;
+}
+.card-form-queryType h2 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-bottom: 3%;
+}
+.card-form-queryType p {
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 0.5rem;
+  padding: 4% 8%;
+  margin-bottom: 5%;
+}
+.card-form-massage {
+  margin-top: 5%;
+}
+.card-form-massage textarea {
+  height: 12rem;
+  border-radius: 1rem;
+  border: 1px solid hsl(186, 15%, 59%);
+}
+.card-form-consent input {
+  height: auto;
+  margin-right: 5%;
+}
+.card-form-consent p {
+  flex-direction: row;
+  margin: 0 0 7%;
+}
+.card button {
+  background-color: hsl(169, 82%, 27%);
+  color: hsl(0, 0%, 100%);
+  padding: 5% 0;
+  border: none;
+  border-radius: 0.7rem;
+  width: 100%;
+}
 
 .attribution {
-  font-size: 11px;
+  font-size: 0.7rem;
   text-align: center;
+  margin-top: 3%;
 }
 .attribution a {
+  font-size: 0.7rem;
   color: hsl(228, 45%, 44%);
 }/*# sourceMappingURL=style.css.map */
