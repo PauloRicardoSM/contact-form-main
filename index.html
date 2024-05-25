@@ -7,111 +7,103 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="src/assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="src/css/style.css">
 
   <title>Frontend Mentor | Contact form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
-  <div class="card">
-    <h1>Contact Us</h1>
+  <div id="interface">
+    <div class="card">
+      <h1>Contact Us</h1>
 
-    <form method="post">
-      <fieldset class="hidden" id="personalInformation">
-        <legend class="visually-hidden">Personal Information</legend>
-        <div class="card-form-personal">
-          <p>
-            <label for="ifirstName">First Name</label>
-            <input type="text" name="firstName" id="ifirstName" aria-describedby="fistNameError">
-            <span class="card-form-error" id="firstNameError" aria-live="polite">This field is required</span>
-          </p>
+      <form method="post">
+        <fieldset class="hidden" id="personalInformation">
+          <legend class="visually-hidden">Personal Information</legend>
+          <div class="card-form-personal">
+            <p>
+              <label for="ifirstName">First Name</label>
+              <input type="text" name="firstName" id="ifirstName" aria-describedby="fistNameError">
+              <span class="card-form-error" id="firstNameError" aria-live="polite">This field is required</span>
+            </p>
 
-          <p>
-            <label for="ilastName">Last Name</label>
-            <input type="text" name="lastName" id="ilastName" aria-describedby="lastNameError">
-            <span class="card-form-error" id="lastNameError" aria-live="polite">This field is required</span>
-          </p>
-        </div>
-      </fieldset>
+            <p>
+              <label for="ilastName">Last Name</label>
+              <input type="text" name="lastName" id="ilastName" aria-describedby="lastNameError">
+              <span class="card-form-error" id="lastNameError" aria-live="polite">This field is required</span>
+            </p>
+          </div>
+        </fieldset>
 
-      <fieldset class="hidden" id="contactInformation">
-        <legend class="visually-hidden">Contact Information</legend>
-        <div class="card-form-email">
-          <p>
-            <label for="iemail">Email Address</label>
-            <input type="email" name="email" id="iemail" aria-describedby="emailError emailInvalidError">
-            <span id="emailInvalidError" aria-live="polite">Please enter a valid email address</span>
-            <span class="card-form-error" id="emailError" aria-live="polite">This field is required</span>
-          </p>
-        </div>
-      </fieldset>
+        <fieldset class="hidden" id="contactInformation">
+          <legend class="visually-hidden">Contact Information</legend>
+          <div class="card-form-email">
+            <p>
+              <label for="iemail">Email Address</label>
+              <input type="email" name="email" id="iemail" aria-describedby="emailError emailInvalidError">
+              <span class="card-form-error" id="emailInvalidError" aria-live="polite">Please enter a valid email address</span>
+              <span class="card-form-error" id="emailError" aria-live="polite">This field is required</span>
+            </p>
+          </div>
+        </fieldset>
 
-      <fieldset class="hidden" id="queryInformation">
-        <legend class="visually-hidden">Query Information</legend>
-        <div class="card-form-queryType">
-          <p>
-            Query Type
-          </p>
-          <p>
-            <input type="radio" name="queryType" id="queryTypeGeneral" value="general"
-              aria-describedby="queryTypeError">
-            <label for="queryTypeGeneral">General Enquiry</label>
-          </p>
-          <p>
-            <input type="radio" name="queryType" id="queryTypeSupport" value="support"
-              aria-describedby="queryTypeError">
-            <label for="queryTypeSupport">Support Request</label>
-          </p>
-          <span class="card-form-error" id="queryTypeError" aria-live="polite">
-            Please select a query type
-          </span>
-        </div>
-      </fieldset>
+        <fieldset class="hidden" id="queryInformation">
+          <legend class="visually-hidden">Query Information</legend>
+          <div class="card-form-queryType">
+            <p>
+              Query Type
+            </p>
+            <p>
+              <input type="radio" name="queryType" id="queryTypeGeneral" value="general"
+                aria-describedby="queryTypeError">
+              <label for="queryTypeGeneral">General Enquiry</label>
+            </p>
+            <p>
+              <input type="radio" name="queryType" id="queryTypeSupport" value="support"
+                aria-describedby="queryTypeError">
+              <label for="queryTypeSupport">Support Request</label>
+            </p>
+            <span class="card-form-error" id="queryTypeError" aria-live="polite">
+              Please select a query type
+            </span>
+          </div>
+        </fieldset>
 
-      <fieldset class="hidden" id="massageInformation">
-        <legend class="visually-hidden">Massage</legend>
-        <div class="card-form-massage">
-          <p>
-            <label for="imassage">Message</label>
-            <textarea name="massage" id="imassage" aria-describedby="areaMassageError"></textarea>
-            <span class="card-form-error" id="areaMassageError" aria-live="polite">This field is required</span>
-          </p>
-        </div>
-      </fieldset>
+        <fieldset class="hidden" id="massageInformation">
+          <legend class="visually-hidden">Massage</legend>
+          <div class="card-form-massage">
+            <p>
+              <label for="imassage">Message</label>
+              <textarea name="massage" id="imassage" aria-describedby="areaMassageError"></textarea>
+              <span class="card-form-error" id="areaMassageError" aria-live="polite">This field is required</span>
+            </p>
+          </div>
+        </fieldset>
 
-      <fieldset class="hidden" id="consent">
-        <legend class="visually-hidden">Consent</legend>
-        <div class="card-form-consent">
-          <input type="checkbox" name="consent" id="iconsent">
-          <label for="iconsent">I consent to being contacted by the team</label>
-          <span class="card-form-error" id="consentError" aria-live="polite">To submit this form, please consent to being contacted</span>
-        </div>
-      </fieldset>
+        <fieldset class="hidden" id="consent">
+          <legend class="visually-hidden">Consent</legend>
+          <div class="card-form-consent">
+            <input type="checkbox" name="consent" id="iconsent">
+            <label for="iconsent">I consent to being contacted by the team</label>
+            <span class="card-form-error" id="consentError" aria-live="polite">To submit this form, please consent to
+              being contacted</span>
+          </div>
+        </fieldset>
 
-      <button>Submit</button>
-    </form>
+        <button id="submit-button">Submit</button>
+      </form>
 
-    <div class="card-massageSent" style="display: none;">
-      <img src="src/assets/images/icon-success-check.svg" alt="Sucess Check">
-      <h2>Message Sent!</h2>
-      <p>Thanks for completing the form. We'll be in touch soon!</p>
+      <div class="card-massageSent" style="display: none;">
+        <img src="src/assets/images/icon-success-check.svg" alt="Sucess Check">
+        <h2>Message Sent!</h2>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
     </div>
-  </div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://github.com/PauloRicardoSM">Paulo Ricardo</a>.
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/PauloRicardoSM">Paulo Ricardo</a>.
+    </div>
   </div>
 </body>
 

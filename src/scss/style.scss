@@ -1,0 +1,58 @@
+@use 'mixins';
+@use 'variables';
+
+@font-face {
+    font-family: 'Karla';
+    src: url(../assets/fonts/static/Karla-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+    @font-face {
+        font-family: 'Karla';
+        src: url('../assets/fonts/static/Karla-Bold.ttf') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+    font-size: 1rem;
+}
+
+body {
+    @include mixins.flex-center;
+    height: 100vh;
+    background-color: variables.$green-lighter;
+    overflow-x: hidden;
+}
+
+.hidden {
+    border: none;
+}
+
+.visually-hidden {
+    display: none;
+}
+
+.card {
+    background-color: variables.$white;
+
+    &-form {
+        &-error {
+            display: none;
+        }
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+}
