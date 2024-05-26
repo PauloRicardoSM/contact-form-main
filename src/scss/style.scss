@@ -28,7 +28,7 @@ body {
     background-color: variables.$green-lighter;
     overflow-x: hidden;
     color: variables.$green-medium;
-    padding: 10% 0;
+    padding: 10% 5%;
 }
 
 .hidden {
@@ -38,6 +38,29 @@ body {
 .visually-hidden {
     display: none;
 }
+
+.massageSent {
+    display: none;
+    // display: block;
+    // position: absolute;
+    // margin: 0 1rem;
+    // top: 1rem;
+    background-color: variables.$gray-darker;
+    color: variables.$gray-medium;
+    box-sizing: border-box;
+    padding: 5%;
+    border-radius: 1rem;
+
+    header {
+        display: flex;
+        margin-bottom: 3%;
+        h2 {
+            color: white;
+            margin-left: 3%;
+        }
+    }
+}
+
 
 .card {
     background-color: variables.$white;
@@ -109,7 +132,7 @@ body {
 
     &-form-consent {
         input {
-            height: auto; 
+            height: auto;
             margin-right: 5%;
         }
 
