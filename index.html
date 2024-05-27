@@ -9,6 +9,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="src/assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="src/css/style.css">
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
   <title>Frontend Mentor | Contact form</title>
 </head>
 
@@ -25,19 +28,19 @@
     <div class="card">
       <h1>Contact Us</h1>
 
-      <form method="post">
+      <form id="myForm" method="post">
         <fieldset class="hidden" id="personalInformation">
           <legend class="visually-hidden">Personal Information</legend>
           <div class="card-form-personal">
             <p>
-              <label for="ifirstName">First Name</label>
-              <input type="text" name="firstName" id="ifirstName" aria-describedby="fistNameError">
-              <span class="card-form-error" id="firstNameError" aria-live="polite">This field is required</span>
+              <label for="ifirstName">First Name *</label>
+              <input type="text" name="firstName" id="ifirstName" aria-describedby="fistNameError" required>
+              <span class="card-form-error" id="ifirstName" aria-live="polite">This field is required</span>
             </p>
 
             <p>
-              <label for="ilastName">Last Name</label>
-              <input type="text" name="lastName" id="ilastName" aria-describedby="lastNameError">
+              <label for="ilastName">Last Name *</label>
+              <input type="text" name="lastName" id="ilastName" aria-describedby="lastNameError" required>
               <span class="card-form-error" id="lastNameError" aria-live="polite">This field is required</span>
             </p>
           </div>
@@ -47,8 +50,8 @@
           <legend class="visually-hidden">Contact Information</legend>
           <div class="card-form-email">
             <p>
-              <label for="iemail">Email Address</label>
-              <input type="email" name="email" id="iemail" aria-describedby="emailError emailInvalidError">
+              <label for="iemail">Email Address *</label>
+              <input type="email" name="email" id="iemail" aria-describedby="emailError emailInvalidError" required>
               <span class="card-form-error" id="emailInvalidError" aria-live="polite">Please enter a valid email
                 address</span>
               <span class="card-form-error" id="emailError" aria-live="polite">This field is required</span>
@@ -57,10 +60,10 @@
         </fieldset>
 
         <fieldset class="hidden" id="queryInformation">
-          <legend class="visually-hidden">Query Information</legend>
+          <legend class="visually-hidden">Query Information *</legend>
           <div class="card-form-queryType">
             <h2>
-              Query Type
+              Query Type *
             </h2>
             <p>
               <input type="radio" name="queryType" id="queryTypeGeneral" value="general"
@@ -82,8 +85,8 @@
           <legend class="visually-hidden">Massage</legend>
           <div class="card-form-massage">
             <p>
-              <label for="imassage">Message</label>
-              <textarea name="massage" id="imassage" aria-describedby="areaMassageError"></textarea>
+              <label for="imassage">Message *</label>
+              <textarea name="massage" id="imassage" aria-describedby="areaMassageError" required></textarea>
               <span class="card-form-error" id="areaMassageError" aria-live="polite">This field is required</span>
             </p>
           </div>
@@ -93,14 +96,15 @@
           <legend class="visually-hidden">Consent</legend>
           <div class="card-form-consent">
             <p>
-              <input type="checkbox" name="consent" id="iconsent">
-              <label for="iconsent">I consent to being contacted by the team</label>
+              <input type="checkbox" name="consent" id="iconsent" required>
+              <label for="iconsent">I consent to being contacted by the team *</label>
               <span class="card-form-error" id="consentError" aria-live="polite">To submit this form, please consent to being contacted</span>
             </p>
           </div>
         </fieldset>
 
-        <button id="submit-button">Submit</button>
+        <input type="submit" value="submit">
+        <button type="submit" id="submitButton">Submit</button>
       </form>
     </div>
 
@@ -109,7 +113,7 @@
       Coded by <a href="https://github.com/PauloRicardoSM">Paulo Ricardo</a>.
     </div>
   </div>
-  
+
   <script src="src/js/script.js"></script>
 </body>
 
