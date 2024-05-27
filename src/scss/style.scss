@@ -90,7 +90,7 @@ body {
 
     &-form {
         &-error {
-            // display: none;
+            display: none;
             color: variables.$error-text;
         }
     }

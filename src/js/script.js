@@ -1,37 +1,34 @@
-// Jquery and GSAP for to change the display of div "massageSent" for block and others changes 
+// Jquery and GSAP for to change the display of div "massageSent" for block and others changes
 $(document).ready(function () {
-    $("#submitButton").click(function (event) {
-        event.preventDefault();
+  $("#submitButton").click(function (event) {
+    event.preventDefault();
 
-        $('#myForm')[0].reset();
+    let hasErros = false;
+    $(".input").each(function () {
+      if (!$(this).val()) {
+        $(this).next(".card-form-error").css("display", "block");
+        hasErros = true;
+      } else {
+        $(this).next(".card-form-error".css("display", "none"));
+      }
+    });
 
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        })
+    if (!hasErros) {
+      $("#myForm")[0].reset();
 
-        $(".massageSent").css({
-            "display": "block",
-            "position": "absolute",
-            "margin": "0 1rem",
-            "top": "1rem"
-        });
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
 
-        gsap.fromTo(".massageSent", {scale: 0}, {scale: 1, duration: .5});
-    })
-})
+      $(".massageSent").css({
+        display: "block",
+        position: "absolute",
+        margin: "0 1rem",
+        top: "1rem",
+      });
 
-//Verificação de erros
-$(document).ready(function() {
-    $('#submitButton').click( function(event) {
-        event.preventDefault();
-
-        $('.input').each(function() {
-            if (!$(this).val()) {
-                $(this).next('.card-form-error').css('display', 'block');
-            } else {
-                $(this).next('.card-form-error').css('display', 'none');
-            }
-        })
-    })
-})
+      gsap.fromTo(".massageSent", { scale: 0 }, { scale: 1, duration: 0.5 });
+    }
+  });
+});
