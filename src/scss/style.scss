@@ -90,7 +90,8 @@ body {
 
     &-form {
         &-error {
-            display: none;
+            // display: none;
+            color: variables.$error-text;
         }
     }
 
@@ -131,14 +132,24 @@ body {
     }
 
     &-form-consent {
-        input {
-            height: auto;
-            margin-right: 5%;
-        }
-
         p {
-            flex-direction: row;
+            display: grid;
+            grid-template-columns: min-content auto;
+            grid-template-rows: 1fr auto;
             margin: 0 0 7%;
+
+            input {
+                align-self: center;
+                justify-self: start;
+            }
+
+            label {
+                margin-left: 5%;
+            }
+
+            span {
+                grid-column: span 2;
+            }
         }
     }
 

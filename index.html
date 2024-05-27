@@ -34,13 +34,13 @@
           <div class="card-form-personal">
             <p>
               <label for="ifirstName">First Name *</label>
-              <input type="text" name="firstName" id="ifirstName" aria-describedby="fistNameError" required>
+              <input type="text" name="firstName" class="input" id="ifirstName" aria-describedby="fistNameError" required>
               <span class="card-form-error" id="ifirstName" aria-live="polite">This field is required</span>
             </p>
 
             <p>
               <label for="ilastName">Last Name *</label>
-              <input type="text" name="lastName" id="ilastName" aria-describedby="lastNameError" required>
+              <input type="text" name="lastName" class="input" id="ilastName" aria-describedby="lastNameError" required>
               <span class="card-form-error" id="lastNameError" aria-live="polite">This field is required</span>
             </p>
           </div>
@@ -51,7 +51,7 @@
           <div class="card-form-email">
             <p>
               <label for="iemail">Email Address *</label>
-              <input type="email" name="email" id="iemail" aria-describedby="emailError emailInvalidError" required>
+              <input type="email" name="email" class="input" id="iemail" aria-describedby="emailError emailInvalidError" required>
               <span class="card-form-error" id="emailInvalidError" aria-live="polite">Please enter a valid email
                 address</span>
               <span class="card-form-error" id="emailError" aria-live="polite">This field is required</span>
@@ -71,8 +71,7 @@
               <label for="queryTypeGeneral">General Enquiry</label>
             </p>
             <p>
-              <input type="radio" name="queryType" id="queryTypeSupport" value="support"
-                aria-describedby="queryTypeError">
+              <input type="radio" name="queryType" class="input" id="queryTypeSupport" value="support" aria-describedby="queryTypeError">
               <label for="queryTypeSupport">Support Request</label>
             </p>
             <span class="card-form-error" id="queryTypeError" aria-live="polite">
@@ -86,7 +85,7 @@
           <div class="card-form-massage">
             <p>
               <label for="imassage">Message *</label>
-              <textarea name="massage" id="imassage" aria-describedby="areaMassageError" required></textarea>
+              <textarea name="massage" class="input" id="imassage" aria-describedby="areaMassageError" required></textarea>
               <span class="card-form-error" id="areaMassageError" aria-live="polite">This field is required</span>
             </p>
           </div>
@@ -96,14 +95,13 @@
           <legend class="visually-hidden">Consent</legend>
           <div class="card-form-consent">
             <p>
-              <input type="checkbox" name="consent" id="iconsent" required>
+              <input type="checkbox" name="consent" class="input" id="iconsent" required>
               <label for="iconsent">I consent to being contacted by the team *</label>
               <span class="card-form-error" id="consentError" aria-live="polite">To submit this form, please consent to being contacted</span>
             </p>
           </div>
         </fieldset>
 
-        <input type="submit" value="submit">
         <button type="submit" id="submitButton">Submit</button>
       </form>
     </div>
