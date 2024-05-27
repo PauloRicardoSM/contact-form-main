@@ -103,6 +103,12 @@ body {
         input {
             margin-right: 5%;
             height: auto;
+
+            &::before {
+                content: '';
+                background-image: url('../assets/images/icon-radio-selected.svg');
+                background-size: cover;
+            }
         }
 
         h2 {
@@ -141,10 +147,18 @@ body {
             input {
                 align-self: center;
                 justify-self: start;
+                width: 1rem;
+
+                &::before {
+                    content: '';
+                    background-image: url(../assets/images/icon-checkbox-check.svg);
+                    background-size: cover;
+                }
             }
 
             label {
-                margin-left: 5%;
+                margin: 0 0 0 5%;
+                align-self: center;
             }
 
             span {

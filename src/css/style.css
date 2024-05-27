@@ -86,6 +86,11 @@ body {
   margin-right: 5%;
   height: auto;
 }
+.card-form-queryType input::before {
+  content: "";
+  background-image: url("../assets/images/icon-radio-selected.svg");
+  background-size: cover;
+}
 .card-form-queryType h2 {
   font-size: 1rem;
   font-weight: normal;
@@ -116,9 +121,16 @@ body {
 .card-form-consent p input {
   align-self: center;
   justify-self: start;
+  width: 1rem;
+}
+.card-form-consent p input::before {
+  content: "";
+  background-image: url(../assets/images/icon-checkbox-check.svg);
+  background-size: cover;
 }
 .card-form-consent p label {
-  margin-left: 5%;
+  margin: 0 0 0 5%;
+  align-self: center;
 }
 .card-form-consent p span {
   grid-column: span 2;
