@@ -7,11 +7,33 @@ $(document).ready(function () {
     $(".input").each(function () {
       if (!$(this).val()) {
         $(this).next(".card-form-error").css("display", "block");
+
+        if (!$("input[name='queryType']:checked").length) {
+          $("#queryTypeError").css("display", "block");
+          return; // Impede o envio do formulário
+        } else {
+          $("#queryTypeError").css("display", "none");
+        }    
+
         hasErros = true;
       } else {
-        $(this).next(".card-form-error".css("display", "none"));
+        $(this).next(".card-form-error").css("display", "none");
+
+        if (!$("input[name='queryType']:checked").length) {
+          $("#queryTypeError").css("display", "block");
+          return; // Impede o envio do formulário
+        } else {
+          $("#queryTypeError").css("display", "none");
+        }    
       }
     });
+
+    if (!$("#iconsent").prop("checked")) {
+      $("#consentError").css("display", "block");
+      return; // Impede o envio do formulário
+    } else {
+      $("#consentError").css("display", "none");
+    }
 
     if (!hasErros) {
       $("#myForm")[0].reset();
