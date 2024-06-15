@@ -25,6 +25,10 @@
     @include mixins.tablet {
         font-size: 1.2rem;
     }
+
+    @include mixins.desktop {
+        font-size: 1rem;
+    }
 }
 
 body {
@@ -190,6 +194,23 @@ body {
         &-form-queryType {
             h2 {
                 font-size: 1.2rem;
+            }
+        }
+    }
+
+    @include mixins.desktop {
+        &-form-personal {
+            display: flex;
+        }
+
+        &-form-queryType {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto;
+
+            h2 {
+                grid-row: 1 / 2;
+                grid-column: 1 / -1;
             }
         }
     }
