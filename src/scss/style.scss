@@ -21,10 +21,15 @@
     box-sizing: border-box;
     font-family: 'Karla', sans-serif;
     font-size: 1rem;
+
+    @include mixins.tablet {
+        font-size: 1.2rem;
+    }
 }
 
 body {
     @include mixins.flex-center;
+
     background-color: variables.$green-lighter;
     overflow-x: hidden;
     color: variables.$green-medium;
@@ -56,7 +61,6 @@ body {
         }
     }
 }
-
 
 .card {
     background-color: variables.$white;
@@ -171,6 +175,24 @@ body {
         border-radius: .7rem;
         width: 100%;
     }
+
+    @include mixins.tablet {
+        width: 30rem;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        button {
+            font-size: 1.5rem;
+        }
+
+        &-form-queryType {
+            h2 {
+                font-size: 1.2rem;
+            }
+        }
+    }
 }
 
 .attribution {
@@ -181,5 +203,13 @@ body {
     a {
         font-size: 0.7rem;
         color: hsl(228, 45%, 44%);
+    }
+
+    @include mixins.tablet {
+        font-size: 0.9rem;
+
+        a {
+            font-size: 0.9rem;
+        }
     }
 }
