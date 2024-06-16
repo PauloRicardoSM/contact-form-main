@@ -101,6 +101,11 @@ body {
         margin-bottom: 3%;
     }
 
+    #emailInvalidError {
+        display: none;
+        color: variables.$error-text;
+    }
+
     &-form {
         &-error {
             display: none;

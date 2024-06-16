@@ -3,34 +3,34 @@ $(document).ready(function () {
   $("#submitButton").click(function (event) {
     event.preventDefault();
 
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     let hasErros = false;
+
     $(".input").each(function () {
       if (!$(this).val()) {
-        $(this).next(".card-form-error").css("display", "block");
-
-        if (!$("input[name='queryType']:checked").length) {
-          $("#queryTypeError").css("display", "block");
-          return; // Impede o envio do formulário
-        } else {
-          $("#queryTypeError").css("display", "none");
-        }    
+        $(this).nextAll(".card-form-error").css("display", "block");
 
         hasErros = true;
       } else {
-        $(this).next(".card-form-error").css("display", "none");
+        $(this).nextAll(".card-form-error").css("display", "none");
 
-        if (!$("input[name='queryType']:checked").length) {
-          $("#queryTypeError").css("display", "block");
-          return; // Impede o envio do formulário
-        } else {
-          $("#queryTypeError").css("display", "none");
-        }    
+        if ($(this).attr('type') === 'email' && !emailRegex.test($(this).val())) {
+          $('#emailInvalidError').css('display', 'block');
+          hasErros = true;
+        }
       }
     });
 
+    if (!$("input[name='queryType']:checked").length) {
+      $("#queryTypeError").css("display", "block");
+      hasErros = true;
+    } else {
+      $("#queryTypeError").css("display", "none");
+    }    
+
     if (!$("#iconsent").prop("checked")) {
       $("#consentError").css("display", "block");
-      return; // Impede o envio do formulário
+      hasErros = true;
     } else {
       $("#consentError").css("display", "none");
     }

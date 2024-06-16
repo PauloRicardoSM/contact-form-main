@@ -97,6 +97,10 @@ body {
 .card label {
   margin-bottom: 3%;
 }
+.card #emailInvalidError {
+  display: none;
+  color: hsl(0, 66%, 56%);
+}
 .card-form-error {
   display: none;
   color: hsl(0, 66%, 56%);

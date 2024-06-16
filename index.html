@@ -51,9 +51,8 @@
           <div class="card-form-email">
             <p>
               <label for="iemail">Email Address *</label>
-              <input type="email" name="email" class="input" id="iemail" aria-describedby="emailError emailInvalidError" required>
-              <span class="card-form-error" id="emailInvalidError" aria-live="polite">Please enter a valid email
-                address</span>
+              <input type="email" name="email" class="input" id="iemail" autocomplete="email" aria-describedby="emailError emailInvalidError" required>
+              <span id="emailInvalidError" aria-live="polite">Please enter a valid email address</span>
               <span class="card-form-error" id="emailError" aria-live="polite">This field is required</span>
             </p>
           </div>
