@@ -13,11 +13,13 @@ $(document).ready(function () {
         hasErros = true;
       } else {
         $(this).nextAll(".card-form-error").css("display", "none");
-
+        
         if ($(this).attr('type') === 'email' && !emailRegex.test($(this).val())) {
           $('#emailInvalidError').css('display', 'block');
           hasErros = true;
-        }
+        } else if ($(this).attr('type')  === 'email') {
+          $('#emailInvalidError').css('display', 'none');
+        }  
       }
     });
 
