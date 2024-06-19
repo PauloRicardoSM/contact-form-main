@@ -1,4 +1,5 @@
-// Jquery and GSAP for to change the display of div "massageSent" for block and others changes
+/* Jquery and GSAP for to change the display of div "massageSent" for block and others 
+changes */
 $(document).ready(function () {
   $("#submitButton").click(function (event) {
     event.preventDefault();
@@ -56,3 +57,23 @@ $(document).ready(function () {
     }
   });
 });
+
+/* 
+This snippet changes the background color of the paragraph associated with the input
+[type:radio], but I couldn’t make it revert to white when the radio button is unchecked.
+If you have any suggestions on how to fix this detail, please get in touch via an issue.
+
+$(document).ready(function() {
+  $('input[name="queryType').on('change', function() {
+    if (!$(this).is(':checked')) {
+      $(this).parent().css({
+        'background-color': 'hsl(148, 38%, 91%)',
+      });
+    } else {
+      $(this).parent().css({
+        'background-color': 'white',
+      });
+    }
+  });
+});
+*/

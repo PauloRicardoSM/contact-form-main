@@ -64,6 +64,7 @@ body {
     header {
         display: flex;
         margin-bottom: 3%;
+
         h2 {
             color: white;
             margin-left: 3%;
@@ -95,10 +96,16 @@ body {
         border: 1px solid variables.$gray-medium;
         border-radius: .5rem;
         height: 2.5rem;
+        cursor: pointer;
+
+        &:hover {
+            border: 2px solid variables.$gray-darker;
+        }
     }
 
     label {
         margin-bottom: 3%;
+        cursor: pointer;
     }
 
     #emailInvalidError {
@@ -142,6 +149,10 @@ body {
             border-radius: .5rem;
             padding: 4% 8%;
             margin-bottom: 5%;
+
+            &:hover {
+                border: 2px solid variables.$gray-darker;
+            }
         }
     }
 
@@ -152,6 +163,11 @@ body {
             height: 12rem;
             border-radius: 1rem;
             border: 1px solid variables.$gray-medium;
+            cursor: pointer;
+
+            &:hover {
+                border: 2px solid variables.$gray-darker;
+            }
         }
     }
 
@@ -192,6 +208,7 @@ body {
         border: none;
         border-radius: .7rem;
         width: 100%;
+        cursor: pointer;
     }
 
     @include mixins.tablet {
